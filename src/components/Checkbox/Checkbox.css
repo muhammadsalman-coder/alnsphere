@@ -1,0 +1,98 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox :not(:last-child) {
+  margin-right: 10px;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 2px solid #dedee4;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #38195c;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  transition: all 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]:hover {
+  border: 1px solid #e86fce;
+  box-shadow: 0 0 5px #e86fce3a;
+}
+
+.checkbox input[type="checkbox"]::before,
+.checkbox input[type="radio"]::before {
+  content: "\2713";
+  font-size: 12px;
+  display: none;
+}
+
+.checkbox input[type="checkbox"]:checked,
+.checkbox input[type="radio"]:checked {
+  background: #e86fce;
+}
+
+.checkbox input[type="checkbox"]:checked::before {
+  display: block;
+  color: #2d134e;
+  font-weight: 900;
+}
+
+.checkbox.rounded input[type="checkbox"],
+.checkbox.rounded input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 2px solid #dedee4;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.checkbox.rounded input[type="checkbox"]::before,
+.checkbox.rounded input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  color: white;
+}
+
+.checkbox.rounded input[type="checkbox"]:checked,
+.checkbox.rounded input[type="radio"]:checked {
+  /* background: #33a2d2; */
+  border: 2px solid #33a2d2;
+}
+.checkbox.rounded input[type="checkbox"]:checked::before,
+.checkbox.rounded input[type="radio"]:checked::before {
+  background: #33a2d2;
+  /* border: 2px solid #33a2d2; */
+}

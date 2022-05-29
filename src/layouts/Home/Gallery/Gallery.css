@@ -1,0 +1,141 @@
+.gallery-wrapper {
+  background-color: #2d134e;
+  position: relative;
+  z-index: 100;
+}
+
+.gallery-botom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 232px;
+
+  background: linear-gradient(
+    181.22deg,
+    rgba(232, 111, 206, 0.15) 1.09%,
+    rgba(232, 111, 206, 0) 96.17%
+  );
+
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+
+  /* border-radius: 50%; */
+}
+
+.gallery-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: url(https://ik.imagekit.io/6pl7k4a01ha/gellery-sparkles_gOIdzzrQq.png?updatedAt=1639157937173);
+}
+
+.gallery-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 531px !important;
+  height: 401px !important;
+  transform: translate(-50%, -50%);
+
+  background: rgba(232, 111, 206, 0.4);
+  filter: blur(150px);
+  border-radius: 50%;
+
+  display: none;
+}
+
+.gallery-content .swiper-wrapper {
+  padding-bottom: 100px;
+}
+.gallery-content .swiper-slide {
+  width: 400px !important;
+  height: 450px !important;
+  border: 2px solid #c4c4c4;
+  border-radius: 30px;
+  overflow: hidden;
+
+  position: relative;
+
+  z-index: 100;
+}
+
+.gallery-content .swiper-slide-active {
+  opacity: 1;
+}
+
+.gallery-content .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: all 0.2s ease;
+  border-radius: 30px;
+}
+
+.gallery-content .swiper-slide-active img {
+  z-index: 100;
+}
+
+.gallery-content .swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-content .swiper-pagination > span:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.gallery-content .swiper-pagination-bullet {
+  width: 18px !important;
+  height: 18px !important;
+  background: rgba(135, 69, 195, 0.4);
+  transition: all 0.2s ease;
+}
+
+.gallery-content .swiper-pagination-bullet-active {
+  width: 24px !important;
+  height: 24px !important;
+  background: linear-gradient(214.62deg, #e86fce 14.2%, #8745c3 90.64%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+
+  position: relative;
+}
+
+.gallery-content .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  background: linear-gradient(
+    214.62deg,
+    rgba(232, 111, 206, 0.5) 14.2%,
+    rgba(135, 69, 195, 0.5) 90.64%
+  );
+  filter: blur(10px);
+  border-radius: 50%;
+}
+
+@media (max-width: 760px) {
+  .gallery-content .swiper-slide {
+    width: 300px !important;
+    height: 350px !important;
+  }
+}
+@media (max-width: 500px) {
+  .gallery-content .swiper-slide {
+    width: 100% !important;
+    height: auto !important;
+  }
+}

@@ -1,0 +1,47 @@
+.faq-accordion {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.faq-accordion-button {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-accordion-button p {
+  margin-right: 1.5rem;
+}
+
+.faq-accordion-button button {
+  width: 34px;
+  height: 34px;
+  background: linear-gradient(215.18deg, #e86fce 15.77%, #8745c3 94.53%);
+  color: white;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.faq-accordion-button button.active {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-body-content {
+  padding: 30px;
+  padding-top: 0;
+}
+
+.faq-accordion-body {
+  transition: all 0.2s ease;
+  height: 0px;
+  overflow: hidden;
+}

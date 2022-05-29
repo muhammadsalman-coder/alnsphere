@@ -1,0 +1,341 @@
+.creature-card {
+  padding: 18px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: all 0.2s ease;
+}
+
+.creature-card > div:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.creature-card:hover {
+  box-shadow: 0px 0px 10px 0px rgba(17, 19, 27, 0.7);
+  border-color: rgba(255, 255, 255, 0.527);
+}
+.creature-card.row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  justify-content: space-between;
+  grid-auto-rows: 1fr;
+}
+
+.creature-card.row > div:not(:last-child) {
+  margin-right: 9px;
+  margin-bottom: 0;
+}
+
+.creature-card.row .creature-details {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.creature-card.row .creature-card-titles {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding-left: 1rem;
+}
+
+.creature-card.row .creature-card-titles {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 3rem !important;
+}
+
+/* =========== */
+/* STATS STARTS */
+/* =========== */
+.creature-card_stats {
+  display: grid;
+  grid-template-columns: repeat(6, 45px);
+  justify-content: center;
+  gap: 1rem;
+}
+
+.creature-card_stats_card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  width: 100%;
+}
+.card_stats_card_icon {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  padding: 0.4rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(17, 19, 27, 0.5);
+  margin-bottom: 0.5rem;
+}
+.card_stats_card_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* =========== */
+/* STATS ENDS */
+/* =========== */
+
+.creature-card.row .creature-card-price {
+  grid-row: 1/2;
+  margin-top: 0;
+}
+.creature-id {
+  padding: 4px 8px;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+.creature-details {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creature-card-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.creature-card-price :not(:last-child) {
+  margin-right: 9px;
+}
+
+.creature-card-price_bar {
+  display: flex;
+  align-items: center;
+}
+
+.creature-details img {
+  width: 100%;
+  /* height: 50px; */
+  border-radius: 5px;
+}
+.creature-details.normal img {
+  width: auto;
+  /* height: 50px; */
+}
+
+/*  */
+/*  */
+/*  */
+.creature-card.everThingColumn .creature-card-price {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.creature-card.everThingColumn .creature-card-price > :not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.creature-card-price-duration {
+  width: 90px;
+}
+/*  */
+/*  */
+/*  */
+
+.creature-card-price_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+.creature-card-analytics {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.creature-card-analytics > :not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media (max-width: 900px) {
+  .creature-card_stats {
+    grid-template-columns: repeat(6, 35px);
+    gap: 0.8rem;
+  }
+
+  .card_stats_card_icon {
+    height: 35px;
+    padding: 0.4rem;
+  }
+}
+@media (max-width: 800px) {
+  .creature-card_stats {
+    grid-template-columns: repeat(3, 35px);
+    gap: 0.8rem;
+  }
+
+  .card_stats_card_icon {
+    height: 35px;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .creature-card.everThingColumn.row {
+    grid-template-columns: 80px 1fr auto;
+  }
+  .everThingColumn.row .creature-card-titles {
+    /* grid-template-columns: 1fr; */
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .creature-card_stats {
+    /* justify-content: start; */
+    /* border: 2px solid red; */
+  }
+
+  .card_stats_card_icon {
+    width: 35px;
+    height: 35px;
+    padding: 0.3rem;
+  }
+
+  .creature-card_stats > :not(:last-child) {
+    margin-right: 0.8rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .everThingColumn.row .creature-card-titles {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .creature-card_stats {
+    justify-content: start;
+    /* border: 2px solid red; */
+  }
+
+  .creature-card.row .creature-card-titles {
+    margin-right: 0rem !important;
+  }
+
+  .creature-card-analytics {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 550px) {
+  .creature-card.everThingColumn.row {
+    grid-template-columns: 100px 1fr;
+    gap: 0rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .creature-card.everThingColumn.row .creature-card-titles {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    padding: 0 0 !important;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+  }
+
+  .creature-card.everThingColumn.row > :last-child {
+    /* border: 2px solid red; */
+    display: flex;
+    /* justify-content: end !important; */
+    justify-self: flex-end;
+    /* justify-content: end; */
+  }
+
+  .creature-card_stats {
+    justify-content: end;
+    /* border: 2px solid red; */
+  }
+
+  .creature-card.everThingColumn.row .creature-details {
+    display: flex;
+    margin: 0 0 !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .creature-card.row {
+    grid-template-columns: 60px 1fr auto;
+  }
+
+  .creature-details {
+    margin-top: 0px;
+  }
+
+  .creature-card.row .creature-card-titles {
+    padding-left: 0rem;
+  }
+
+  .creature-details.normal img {
+    width: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .creature-card-analytics {
+    justify-content: space-between;
+  }
+
+  .creature-card-price {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .creature-card-price > p {
+    font-size: 10px;
+  }
+
+  .creature-card-price_bar p {
+    font-size: 14px;
+  }
+
+  .creature-card-analytics > :not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .creature-card.row .creature-card-price {
+    flex-direction: column;
+  }
+
+  .creature-card.row .creature-card-price > :not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .creature-card.row .creature-card-price_bar {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .creature-card.row .creature-card-price_bar > :not(:last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  .creature-card.row .creature-card-price {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .creature-card.row .creature-card-price :not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+}

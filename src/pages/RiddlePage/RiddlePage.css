@@ -1,0 +1,38 @@
+
+
+.riddle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.riddle-form{
+    padding: 2rem;
+    border: 1px solid beige;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.riddle-input{
+    background-color: beige;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+}
+
+.statusMsg{
+    text-align: center;
+    color: rgb(255 132 132);
+}
+
+.riddle-submit-btn{
+    margin: 1rem 0;
+}
+
+

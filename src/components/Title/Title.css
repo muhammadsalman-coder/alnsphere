@@ -1,0 +1,6 @@
+.Title-Text {
+  background: linear-gradient(270deg, #8d52f5, #db6dcf);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,535 @@
+.hero {
+  
+  .mobile-header-text {
+    font-size: 3.5rem;
+    color: white;
+  }
+  display: block;
+  height: 100vh;
+  // background-image: url('./../../../assets/img/desktop.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+
+  // Animation
+  // animation: desktop 2s;
+  // animation-delay: 0s;
+  // transition: all 0.5s ease;
+  // animation-fill-mode: forwards;
+
+  /* //V2 */
+  // background-position: 25.3% 60%;
+  // background-size: cover;
+  // position: relative;
+  // perspective: 400px;
+  // overflow: hidden;
+  // .test {
+  //   width: 50%;
+  //   // background: green;
+  //   height: 50vh;
+  // }
+
+  .canvas-container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+  }
+  .parallax-holder {
+    width: 100%;
+    height: 100vh;
+    // background: red;
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/hero/bg-min_58DdIoI4y.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642866642291");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // overflow: hidden;
+
+    .parallax-scene {
+      // position: absolute;
+      position: relative;
+      // background-color: red;
+      position: relative;
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 120vh;
+      // margin-top: 9rem;
+      // animation: dragon 2s;
+      // animation-delay: 0s;
+      // transition: all 0.5s ease-in-out;
+      // animation-fill-mode: forwards;
+      transform: scale(1);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .base-character {
+        max-width: 500px;
+        width: 40vw;
+        position: absolute;
+        bottom: 15% !important;
+        left: 5% !important;
+        img {
+          width: 100%;
+          @media (min-width: 1500px) {
+            width: 590px !important;
+          }
+          @media (min-width: 1700px) {
+            width: 600px !important;
+          }
+          @media (min-width: 1900px) {
+            width: 620px !important;
+          }
+          @media (min-width: 2100px) {
+            width: 30vw !important;
+          }
+        }
+
+    
+      }
+      .dragon-image {
+        max-width: 55vw;
+        position: absolute;
+        top: -7% !important;
+        left: 54% !important;
+
+        img {
+          width: 100%;
+
+          @media (min-width: 1500px) {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes dragon {
+    0% {
+      width: 100%;
+      height: 100vh;
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+      transform-style: preserve-3d;
+      left: 0px;
+      top: 0px;
+      //     /* background-position: 25.3% 60%; */
+      //     background-position: 0% 65%;
+    }
+
+    50% {
+      top: calc(101vh - 500px);
+      left: 450px;
+    }
+
+    100% {
+      // background-size: 32%;
+      opacity: 0.1;
+      width: 500px;
+      height: 370px;
+      top: calc(101vh - 600px);
+      left: 21%;
+      transform: rotateX(1deg) rotateY(10deg) rotateZ(1deg);
+      transform-style: preserve-3d;
+    }
+  }
+
+  .layer{
+    position: relative;
+    z-index: 1;
+    .dragon-glow{
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(48.7% - 20px);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      animation: dragon-light 3s infinite;
+    }
+    .flame-anim-container{
+      position: absolute;
+      top: 55%;
+      left: 25%;
+      .flame-anim{
+        // background: rgb(144 0 245);
+        border:2px solid rgba(255,255,255,.1);
+        border-radius:400px;
+        position:absolute;
+        margin:auto;
+        @for $i from 1 through 60{
+          &:nth-of-type(#{$i}){
+            // box-shadow: 3px 0px rgba(255,255,255, - ($i/40)),6px -5px rgba(10, 0, 0,  - ($i/40));
+            box-shadow:
+              inset 0 0 50px #fff,
+              inset 20px 0 80px #f0f,
+              inset -20px 0 80px #0ff,
+              inset 20px 0 300px #f0f,
+              inset -20px 0 300px #0ff,
+              0 0 50px #fff,
+              -10px 0 80px #f0f,
+              10px 0 80px #0ff;
+            width:($i * 6) + 0px;
+            height:($i * 1) + 0px;
+            right:($i * 10) + 0px;
+            bottom:($i * 10) + 0px;
+            //-webkit-filter:blur($i/3 + 8px);
+            -webkit-filter: blur(calc($i/3) + 8px);
+            -moz-filter: blur(calc($i/3) + 8px);
+            -o-filter: blur(calc($i/3) + 8px);
+            -ms-filter: blur(calc($i/3) + 8px);
+            //filter: url(#blur);
+            transform-origin: calc($i * 4) + 0px ($i * 2) + 0px;
+            animation: spin 3s calc($i/10) + 0s linear infinite;
+            // background:rgba(90 + ($i*3),33 + ($i*1) ,205,1 - ($i/80));
+            background:rgba(90 + ($i*3),33 + ($i*1) ,205, 1);
+          }
+        }
+      }
+
+      @keyframes spin{
+        0%{transform:rotate(0deg)}
+        100%{transform:rotate(360deg)}
+      }
+    }
+
+    @keyframes dragon-light {
+      0%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      }
+      50%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 128px 36px #e1e1e1;
+      }
+      100%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      }
+    }
+
+  }
+
+
+  .parallax-scene {
+    transition: all 1s linear;
+    z-index: 2;
+  }
+
+  .remove-parallax-scene {
+    transform: scale(0) !important;
+    transform-origin: 32% 70%;
+    opacity: 0;
+  }
+
+  .add-parallax-scene {
+    transform: scale(1) !important;
+    transform-origin: 32% 70%;
+    opacity: 1;
+  }
+
+  .line {
+    width: 100%;
+    max-width: 800px;
+    height: 8px;
+    margin: 0 0 10px 0;
+    position: relative;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  .Typewriter {
+    position: absolute;
+    top: 75%;
+    left: 30%;
+  }
+
+  .button {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5%;
+    z-index: 9;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      color: white !important;
+      text-decoration: none;
+    }
+    img {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+}
+
+$shooting-time: 3000ms;
+
+.mobile-parallax-holder {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://ik.imagekit.io/6pl7k4a01ha/ImageBackground-min_pljLOkd7f.png?updatedAt=1639321667708") !important;
+  // background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Planet-min_Fo__OCE0qqb.png?updatedAt=1639321668300") !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-position: top !important;
+  height: 100%;
+  overflow: hidden !important;
+  z-index: 1000000;
+  transform: rotateZ(0deg);
+
+  .mobile_hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Planet-min_Fo__OCE0qqb.png?updatedAt=1639321668300") !important;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .glitch_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Planet-min_Fo__OCE0qqb.png?updatedAt=1639321668300") !important;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      clip: rect(0, 0, 0, 0);
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+
+  .ainsphere-text {
+    width: 95vw;
+    z-index: 1;
+    margin-bottom: 40px;
+  }
+
+  .hero_open_teaser_modal_btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .hero_open_teaser_modal_btn:hover{
+    transform: scale(1.1);
+  }
+  .hero_open_teaser_modal_btn svg{
+    color: #157ded;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+
+}
+
+.Hero-btn {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+}
+
+
+.particles-anim-container{
+  position: relative;
+  z-index: 2;
+  .circle-container {
+    $particleNum: 200;
+    $particleColor: hsl(180, 100%, 80%);
+    position: absolute;
+    transform: translateY(-10vh);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    .circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      mix-blend-mode: screen;
+      background-image: radial-gradient(
+        hsl(180, 100%, 80%),
+        hsl(180, 100%, 80%) 10%,
+        hsla(180, 100%, 80%, 0) 56%
+      );
+
+      animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+
+      @keyframes fade-frames {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0.7;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scale-frames {
+        0% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+
+        50% {
+          transform: scale3d(2.2, 2.2, 1);
+        }
+
+        100% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+      }
+    }
+
+    $particleBaseSize: 8;
+
+    
+    @for $i from 1 through $particleNum {
+      &:nth-child(#{$i}) {
+        $circleSize: random($particleBaseSize);
+        width: $circleSize + px;
+        height: $circleSize + px;
+
+        $startPositionY: random(10) + 100;
+        $framesName: "move-frames-" + $i;
+        $moveDuration: 28000 + random(9000) + ms;
+
+        animation-name: #{$framesName};
+        animation-duration: $moveDuration;
+        animation-delay: random(37000) + ms;
+
+        @keyframes #{$framesName} {
+          from {
+            transform: translate3d(
+              #{random(100) + vw},
+              #{$startPositionY + vh},
+              0
+            );
+          }
+
+          to {
+            transform: translate3d(
+              #{random(100) + vw},
+              #{- $startPositionY - random(30) + vh},
+              0
+            );
+          }
+        }
+
+        .circle {
+          animation-delay: random(4000) + ms;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes tail {
+  0% {
+    width: 0;
+  }
+
+  30% {
+    width: 100px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shining {
+  0% {
+    width: 0;
+  }
+
+  50% {
+    width: 30px;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes shooting {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes sky {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(45 + 360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .mobile-parallax-holder {
+    display: flex;
+  }
+  .parallax-holder,
+  .parallax-scene {
+    display: none !important;
+  }
+  .glitch {
+    visibility: hidden;
+  }
+  .canvas-container {
+    display: none;
+  }
+}

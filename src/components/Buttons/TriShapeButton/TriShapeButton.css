@@ -1,0 +1,87 @@
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+  }
+
+
+.tri-button-wrapper {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tri-button-wrapper::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(15px);
+  background: linear-gradient(
+    to left,
+    #ff5770,
+    #e4428d,
+    #c42da8,
+    #9e16c3,
+    #6501de,
+    #9e16c3,
+    #c42da8,
+    #e4428d,
+    #ff5770
+  );
+  background-size: 200% 200%;
+  display: none;
+  animation: animateGlow 1.25s linear infinite;
+}
+
+
+.notnormal.tri-button-wrapper:hover::after{
+  display: block;
+}
+
+.normal.tri-button-wrapper:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(#e86fce 0px 0px 10px) drop-shadow(#ffffff3b 0px 5px 0px);
+}
+
+.tri-button {
+  padding: 17px 35px;
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  transition: all 0.2s ease;
+
+  position: relative;
+  z-index: 99;
+
+  background: linear-gradient(56.62deg, #8745c3 10.08%, #e86fce 86.24%);
+  box-shadow: inset 0px -4px 4px rgba(255, 255, 255, 0.3);
+
+  transition: filter 250ms ease-in-out, transform 250ms ease-in-out;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 200px;
+  text-align: center;
+  justify-content: center;
+}
+
+.tri-button span {
+  margin-right: 12px;
+}
+
+.tri-button-wrapper.normal .tri-button {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  border: none;
+
+  position: relative;
+
+  z-index: 10;
+}

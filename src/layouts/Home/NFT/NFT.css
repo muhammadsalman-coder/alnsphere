@@ -1,0 +1,75 @@
+.nft-wrapper {
+  background: url(https://ik.imagekit.io/6pl7k4a01ha/nft-bg_ekO-33eTA.png?updatedAt=1639327992720);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  padding: 40px 0;
+}
+
+.nft-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2d134e;
+  z-index: -1;
+}
+
+.nft {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nft > div:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.nft-left {
+  width: 100%;
+  max-width: 570px;
+}
+
+.nft-right img {
+  width: 373px;
+  height: 380px;
+  border-radius: 25px;
+}
+
+@media (max-width: 800px) {
+  .nft {
+    align-items: unset;
+    flex-direction: column;
+  }
+
+  .nft > div:not(:last-child) {
+    margin-right: 0rem;
+    margin-bottom: 3rem;
+  }
+
+  .nft-left {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .nft-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .nft {
+    align-items: unset;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nft-right img {
+    width: 100%;
+    height: auto;
+  }
+}

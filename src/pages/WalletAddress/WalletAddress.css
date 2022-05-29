@@ -1,0 +1,51 @@
+.wallet-container{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;  
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#google-sheet-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#google-sheet-form .form-inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    flex-wrap: wrap;
+}
+
+#google-sheet-form input::placeholder{
+    color:white;
+}
+
+#google-sheet-form input{
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid rgb(210, 208, 208);
+    border-radius: 10px;
+    margin-right: 1rem;
+    width: 300px;
+    color: white;
+    max-width: 80vw;
+    margin-bottom: 1rem;
+}
+
+#postOnGoogleSheetbtn{
+    color: white;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 1px solid white;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}

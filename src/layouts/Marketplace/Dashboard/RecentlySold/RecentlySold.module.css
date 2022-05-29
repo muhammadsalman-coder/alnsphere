@@ -1,0 +1,45 @@
+.recentlyListed {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.recentlyListedHeader {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: #36175e;
+}
+
+.btn.active {
+  background-color: #36175e;
+  border-bottom: 2px solid #e86fce;
+}
+
+.linkToNextPage {
+  color: #e86fce;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.linkToNextPage > :last-child {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .recentlyListedHeader > div {
+    flex: 1;
+  }
+}

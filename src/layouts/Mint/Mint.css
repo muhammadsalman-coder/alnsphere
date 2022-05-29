@@ -1,0 +1,338 @@
+.mint_overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.mint_overlay h2{
+    color: white;
+    /* font-size: 1.4rem; */
+}
+
+.mint_overlay a{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    color: white;
+}
+.mint_overlay a svg{
+    width: 50px;
+    height: 50px;
+}
+
+.mint_container{
+    position: relative;
+    z-index: 0;
+    background-color: black;
+}
+
+div.hidden{
+    display: none;
+}
+
+.mint_video_container{
+    overflow: hidden;
+    height: 100vh;
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.mint_video{
+    height: 100%;
+    margin: auto;
+    min-width: 1260px;
+    width: 100vw;
+}
+
+.mint_video.hidden{
+    display: none;
+}
+
+.mint_ship_container{
+    height: 100vh;
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Mint/shipdesktop-min_OW1uZUQf6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652580350381");
+    -webkit-background-size: auto 100vh;
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    -webkit-background-position: center;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.mint_button{
+    position: absolute;
+    z-index: 3;
+    width: 32vh;
+    height: 15%;
+    bottom: 11%;
+    right: calc(50vw - 53vh);
+    cursor: pointer;
+}
+
+.mint_button img{
+    width: 100%;
+    height: auto;
+}
+
+.mint_glow{
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    width: 20%;
+    height: 20%;
+    bottom: 7%;
+    right: 19%;
+    opacity: 0.7;
+}
+
+.mint_glow img{
+    width: 100%;
+    height: 100%;
+}
+
+.mint_glow.hidden{
+    display: none;
+}
+
+.mint_bulb_light{
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mint_left_display{
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+    height: 21%;
+    bottom: 27.5%;
+    left: 4%;
+    opacity: 0.7;
+}
+
+.mint_left_display img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.mint_back_button {
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+    height: 5%;
+    top: 3%;
+    left: 2%;
+    cursor: pointer;
+}
+.mint_back_button img{
+    width: 100%;
+    height: auto;
+}
+
+.mine_right_light{
+    position: absolute;
+    z-index: 3;
+    right: 21%;
+    bottom: 17%;
+    width: 23%;
+    height: 33%;
+}
+
+.mine_right_light img{
+    width: 100%;
+    height: auto;
+}
+
+
+#ship_mobile{
+    display: none;
+}
+
+
+.mint_button_mobile{
+    display: none;
+    position: absolute;
+    /* max-width: 130px; */
+    /* width: 25%; */
+    height: 6%;
+    max-height: 100px;
+    bottom: 1.2%;
+    right: calc(45vw - 18vh);
+}
+.mint_button_mobile img{
+    height: 100%;
+    width: auto;
+}
+
+
+.mint_counter{
+    position: absolute;
+    bottom: 6%;
+    left: calc(50vw - 11.2vh);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #274445;
+    width: calc(270px + 3vw)
+}
+.mint_counter_text{
+    margin: 0 2rem;
+}
+.mint_counter button{
+    width: 50px;
+    color: #274445;
+    cursor: pointer;
+}
+
+.mint_total_items{
+    position: absolute;
+    bottom: 33.5%;
+    left: calc(50vw - 11.2vh);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+.mint_wallet_address{
+    position: absolute;
+    top: 18%;
+    left: calc(49vw - 12vh);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+@media screen and (max-aspect-ratio: 1/1) {
+    
+    .mint_back_button{
+        height: 6%;
+    /* width: 20%; */
+        max-height: 100px;
+        top: initial;
+        bottom: 1.2%;
+        left: calc(48vw - 16vh);
+    }
+    .mint_back_button img{
+        height: 100%;
+        width: auto;
+    }
+    .mint_button_mobile{
+        display: block; 
+    }
+    .mint_left_display {
+        display: none;
+    }
+    
+    .mint_ship_container{
+        /* background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/ship_mobilee-min_B6v0RIL_0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651157340758'); */
+        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/shipmobile_1-min_Uw-7GcPKw.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652580616828');
+    }
+    .mint_button{
+        width: 16%;
+        height: 14%;
+        bottom: 21%;
+        right: 6%;
+        display: none;
+    }
+    .mint_counter{
+        bottom: 21%;
+        left: calc(50vw - 9.8vh);
+        font-size: 2.5rem;
+        max-width: 250px;
+        width: 60%;
+    }
+    .mint_counter button{
+        width: 40px;
+    }
+    .mint_counter_text{
+        margin: 0 1rem;
+    }
+    .mint_total_items{
+        bottom: 44.4%;
+        font-size: 1.8rem;
+        left: calc(51vw - 10.2vh);
+    }
+    .mint_wallet_address{
+        font-size: 1.8rem;
+        top: 19.4%;
+    }
+}
+
+@media screen and (max-height:780px) {
+    .mint_counter {
+        font-size: 2rem;
+        width: 50%;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:1300px) and (min-aspect-ratio: 1/1) {
+    .mint_counter {
+        left: calc(50vw - 11.8vh);
+        width: 280px;
+    }
+    .mint_counter_text{
+        margin: 0 1rem;
+    }
+}
+
+
+
+@media screen and (max-width:500px) {
+    .mint_counter_text{
+        margin: 0 0.5rem;
+    }
+    .mint_counter {
+        left: calc(44vw - 9.8vh);
+    }
+}
+
+@media screen and (max-width: 389px){
+    .mint_counter {
+        left: calc(44vw - 7.8vh);
+    }
+    .mint_counter {
+        left: calc(44vw - 9.8vh);
+        font-size: 1.5rem;
+    }
+    .mint_counter button {
+        width: 30px;
+    }  
+    .mint_total_items{
+        font-size: 1.5rem;
+    }
+    .mint_wallet_address{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 370px){
+    .mint_counter {
+        left: calc(44vw - 7.8vh);
+    }
+    
+}
+
+
+
+

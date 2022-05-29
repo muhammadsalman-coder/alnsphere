@@ -1,0 +1,131 @@
+.navbar {
+  height: 52px;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  z-index: 100000000;
+}
+.nav-brand {
+  width: 40px;
+}
+
+.nav-left {
+  display: flex;
+  /* align-items: center;
+  justify-content: space-between; */
+  padding: 0 1rem;
+}
+
+.nav-left a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a :first-child {
+  margin-right: 1.8rem;
+}
+
+/* .grid-dropdown {
+  display: flex;
+  align-content: center;
+  border: 2px solid red;
+} */
+
+.nav-center {
+  display: flex;
+  align-content: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-logout-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.nav-logout-btn :first-child {
+  margin-right: 6px;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    grid-template-columns: 230px 1fr auto;
+  }
+
+  .hamburger {
+    display: block;
+    width: 28px;
+    filter: invert(1);
+    cursor: pointer;
+  }
+
+  .nav-right {
+    padding-right: 1rem;
+  }
+
+  .nav-right :first-child {
+    margin-right: 1rem;
+  }
+
+  .nav-logout-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    grid-template-columns: 1fr auto;
+    gap: 0rem 1rem;
+  }
+
+  .navbar {
+    height: auto;
+    padding: 0.6rem 2rem;
+  }
+
+  .nav-right {
+    padding: 0rem 0rem;
+    padding-right: 0rem;
+  }
+
+  .nav-center {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+
+  .nav-left {
+    padding: 0rem 0rem;
+    padding-left: 0rem;
+  }
+
+  .nav-center {
+    display: flex;
+    align-content: center;
+    height: 50px;
+  }
+
+  .nav-left a :first-child {
+    margin-right: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: auto;
+    padding: 0.6rem 16px;
+  }
+}
